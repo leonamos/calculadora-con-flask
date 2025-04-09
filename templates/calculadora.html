@@ -74,5 +74,19 @@
             <div class = "form-group">
                 <label for="segundo_numero">Segundo numero:</label>
                 <input type="text" id="segundo_numero" name="segundo_numero" required>
+            </div>
+
+            <button type="submit">Calcular</button>
         </form>
+
+        {% if error %}
+            <div class="resultado error">
+                {{ error }}
+            </div>
+        {% elif resultado is not none %}
+            <div class="resultado">
+                <h2>Resultado: {{ resultado }}</h2>
+            </div>
+        {% endif %}
     </body>
+</html>
